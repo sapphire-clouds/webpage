@@ -1,0 +1,177 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to bottom, #500020, #030018);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'EB Garamond', serif;
+}
+
+#message {
+    position: relative;
+    top: 20px;
+    font-size: 2.5em;
+    color: #f8f0e3;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 2px #d8b4fe;
+    z-index: 20;
+    font-family: 'EB Garamond', serif;
+}
+
+#bouquet {
+    position: absolute;
+    width: 800px;
+    height: 1000px;
+    transform: rotate(-5deg) translateX(10%);
+    z-index: 10;
+}
+
+.rose {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: inline-block;
+    animation: yidon 5s infinite;
+}
+
+.petal {
+    width: 50px;
+    height: 50px;
+    background: #fcc2d3;
+    border-radius: 0px 50%;
+    position: absolute;
+    box-shadow: 0 0 5px #e07aaa;
+    z-index: 2;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+}
+
+.petal:nth-child(2) {
+    transform-origin: right bottom;
+    transform: rotate(90deg);
+    background: #f7b2c7;
+    left: -10px;
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(3) {
+    width: 40px;
+    height: 40px;
+    left: 10px;
+    top: -20px;
+    z-index: 1;
+    background: #f1c2d4;
+    transform-origin: bottom right; 
+    animation: zhankai2 10s infinite;
+}
+
+.petal:nth-child(4) {
+    transform: rotate(90deg);
+    width: 40px;
+    height: 40px;
+    left: 0px;
+    top: -20px;
+    z-index: 1;
+    background: #f3a5c3;
+    transform-origin: bottom right; 
+    animation: zhankai1 10s infinite;
+}
+
+.petal:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    left: 20px;
+    top: -30px;
+    z-index: 0;
+    background: #e07aaa;
+}
+
+.leaf {
+    position: absolute;
+    top: 120px;
+    left: -115px;
+    z-index: -1;
+}
+
+.stem {
+    width: 240px;
+    height: 40px;
+    background: transparent;
+    border: 8px solid #85b485;
+    border-color: #a8dcb3 transparent transparent transparent;
+    border-radius: 50% 50%;
+    transform: rotate(100deg);
+}
+
+.leafs {
+    width: 50px;
+    height: 40px;
+    border-radius: 0px 50%;
+    background: #a8dcb3;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    z-index: 49;
+}
+
+.leafs:nth-child(2) {
+    width: 40px;
+    height: 20px;
+    top: 40px;
+    left: 140px;
+    transform: rotate(120deg);
+}
+
+@keyframes yidon {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+@keyframes zhankai1 {
+    0%, 100% { transform: rotate(90deg); }
+    50% { transform: rotate(100deg); }
+}
+
+@keyframes zhankai2 {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(10deg); }
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: .6em;
+    background-color: #d677ab;
+    color: #302c50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 1px #d8b4fe;
+    transition: transform 0.2s;
+    position: relative;
+    z-index: 20;
+    font-family: 'EB Garamond', serif;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 15;
+}
